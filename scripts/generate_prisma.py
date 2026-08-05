@@ -90,7 +90,7 @@ arrow_right(5.0 + box_w/2, 10.2, excl_x - excl_w/2)
 # === RETRIEVAL ===
 draw_box(5.0, 7.6, box_w, box_h, f'Reports sought for retrieval\n(n = {FLOW["retrieval_sought"]})')
 draw_excl(excl_x, 7.6, excl_w, excl_h,
-    ['Reports not retrieved', f'(n = {FLOW["not_retrieved"]})'], fontsize=8)
+    ['Reports not retrieved', f'(n = {FLOW["not_retrieved"]})', 'UFSCar access unavailable'], fontsize=7.5)
 arrow_right(5.0 + box_w/2, 7.6, excl_x - excl_w/2)
 
 # === ELIGIBILITY ===

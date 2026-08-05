@@ -10,7 +10,7 @@ The Zotero CSV files available in the working archive contain 98 imported rows. 
 
 ## Screening
 
-The final full-text set has 38 records: 35 included and 3 excluded. The three full-text exclusions are retained with their reasons in `data/screening/full_text_decisions.csv` and `data/studies.csv`.
+The final full-text set has 38 records: 35 included and 3 excluded. The three full-text exclusions are retained with their reasons in `data/screening/full_text_decisions.csv` and `data/studies.csv`. Of the 66 reports sought for retrieval, 28 were inaccessible because UFSCar institutional access/login did not provide the publisher PDFs; protected files are not redistributed.
 
 The working screening archive contains 147 bibliographic entries and 131 explicit title/abstract decisions. The manuscript reports 148 records after deduplication; the missing record and the 17 records without an explicit decision are not fabricated. Until they are reconciled, this package must not be described as a complete record-level reconstruction of the 183-record PRISMA flow.
 
