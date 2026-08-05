@@ -1,0 +1,24 @@
+# Local and build artifacts
+__pycache__/
+*.py[cod]
+.venv/
+.env
+.DS_Store
+Thumbs.db
+
+# LaTeX outputs
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.run.xml
+*.synctex.gz
+
+# Do not publish publisher PDFs or local Zotero attachments
+*.pdf
+!results/figures/*.pdf
+raw/

@@ -1,0 +1,5 @@
+group,label,expertise_level,safety_level,count,percentage
+A,Group A — Direct generation,1,1,14,40.0
+B,Group B — Static neuro-symbolic,2,2,16,45.7
+C,Group C — Formal verification,3,3,2,5.7
+D,Group D — Closed-loop recovery,3,3,3,8.6

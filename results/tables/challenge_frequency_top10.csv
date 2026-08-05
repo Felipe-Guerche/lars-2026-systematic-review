@@ -1,0 +1,11 @@
+category,count,percentage_of_studies
+Hallucination,22,62.9
+Latency,15,42.9
+Generalization,11,31.4
+Misinterpretation,7,20.0
+Physical constraints,7,20.0
+Complexity,6,17.1
+Execution/grounding error,4,11.4
+ASR errors (speech),4,11.4
+Bias,3,8.6
+Context window,3,8.6

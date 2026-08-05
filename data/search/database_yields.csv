@@ -1,0 +1,10 @@
+database,string,records,total_reported
+Scopus,1,39,99
+Scopus,2,33,99
+Scopus,3,27,99
+IEEE Xplore,1,18,45
+IEEE Xplore,2,21,45
+IEEE Xplore,3,6,45
+ACM Digital Library,1,18,39
+ACM Digital Library,2,4,39
+ACM Digital Library,3,17,39
