@@ -16,35 +16,38 @@ assert FLOW['retrieval_sought'] - FLOW['not_retrieved'] == FLOW['assessed']
 assert FLOW['assessed'] - FLOW['full_text_excluded'] == FLOW['included']
 
 fig, ax = plt.subplots(figsize=(10, 15))
-ax.set_xlim(-0.2, 12)
-ax.set_ylim(0, 16)
+ax.set_xlim(-0.2, 9.4)
+ax.set_ylim(1.7, 14.7)
 ax.set_aspect('equal')
 ax.axis('off')
 
 border_color = '#333333'
 header_color = '#FFC107'
 phase_color = '#5B9BD5'
+font_scale = 2.0
 box_w = 4.2
 box_h = 1.05
-excl_w = 3.8
+excl_w = 4.2
 excl_h = 1.15
-layout_shift = -0.50
+layout_shift = -2.5
 flow_x = 5.0 + layout_shift
-excl_x = 9.5 + layout_shift
-header_x, header_y, header_w, header_h = 0.5 + layout_shift, 14.2, 9.0, 0.7
+excl_x = 9.6 + layout_shift
+header_x, header_y, header_w, header_h = 0.0, 14.2, 9.0, 0.7
 phase_gap = 0.08
+phase_x, phase_w = -0.1, 0.35
 id_y, screening_y, retrieval_y, eligibility_y, included_y = 12.6, 10.1, 7.6, 5.1, 2.6
 main_centers = (id_y, screening_y, retrieval_y, eligibility_y, included_y)
 assert header_y - header_h / 2 > id_y + box_h / 2, 'header overlaps identification box'
 assert all(upper - box_h / 2 > lower + box_h / 2 for upper, lower in zip(main_centers, main_centers[1:])), 'main boxes overlap'
 assert excl_x - excl_w / 2 > flow_x + box_w / 2, 'side boxes overlap main boxes'
+assert phase_x + phase_w + phase_gap < flow_x - box_w / 2, 'phase labels overlap main boxes'
 
 def draw_box(cx, cy, w, h, text, bold=False, italic=False, fontsize=9):
     ax.add_patch(patches.FancyBboxPatch((cx - w/2, cy - h/2), w, h,
         boxstyle="round,pad=0.05", facecolor='white', edgecolor=border_color, linewidth=1.2))
     fw = 'bold' if bold else 'normal'
     fi = 'italic' if italic else 'normal'
-    ax.text(cx, cy, text, ha='center', va='center', fontsize=fontsize,
+    ax.text(cx, cy, text, ha='center', va='center', fontsize=fontsize * font_scale,
         fontweight=fw, fontstyle=fi)
 
 def draw_excl(cx, cy, w, h, text_lines, bold_idx=None, fontsize=8):
@@ -55,7 +58,7 @@ def draw_excl(cx, cy, w, h, text_lines, bold_idx=None, fontsize=8):
         y_off = (n/2 - 0.5 - i) * 0.28
         fw = 'bold' if (bold_idx is not None and i == bold_idx) else 'normal'
         ax.text(cx, cy + y_off, line, ha='center', va='center',
-            fontsize=fontsize, fontweight=fw)
+            fontsize=fontsize * font_scale, fontweight=fw)
 
 def arrow_down(x, y1, y2):
     if y1 <= y2:
@@ -72,7 +75,7 @@ def arrow_right(x_tail, y, x_head):
 ax.add_patch(patches.FancyBboxPatch((header_x, header_y - header_h / 2), header_w, header_h,
     boxstyle="round,pad=0.05", facecolor=header_color, edgecolor=border_color, linewidth=1.5))
 ax.text(header_x + header_w / 2, header_y, 'Identification of studies via databases',
-    ha='center', va='center', fontsize=11, fontweight='bold')
+    ha='center', va='center', fontsize=11 * font_scale, fontweight='bold')
 
 # === PHASE LABELS ===
 phase_data = [
@@ -83,10 +86,10 @@ phase_data = [
     ('Included', included_y, 1.5),
 ]
 for label, cy, h in phase_data:
-    ax.add_patch(patches.FancyBboxPatch((0.05, cy - h/2), 0.35, h,
+    ax.add_patch(patches.FancyBboxPatch((phase_x, cy - h/2), phase_w, h,
         boxstyle="round,pad=0.02", facecolor=phase_color, edgecolor=border_color, linewidth=1))
-    ax.text(0.225, cy, label, ha='center', va='center',
-        fontsize=8, fontweight='bold', color='white', rotation=90)
+    ax.text(phase_x + phase_w / 2, cy, label, ha='center', va='center',
+        fontsize=8 * font_scale, fontweight='bold', color='white', rotation=90)
 
 # === IDENTIFICATION ===
 draw_box(flow_x, id_y, box_w, box_h,
@@ -107,13 +110,14 @@ arrow_right(flow_x + box_w/2 + phase_gap, screening_y, excl_x - excl_w/2 - phase
 # === RETRIEVAL ===
 draw_box(flow_x, retrieval_y, box_w, box_h, f'Reports sought for retrieval\n(n = {FLOW["retrieval_sought"]})')
 draw_excl(excl_x, retrieval_y, excl_w, excl_h,
-    ['Reports not retrieved', f'(n = {FLOW["not_retrieved"]})', 'UFSCar access unavailable'], fontsize=7.5)
+    ['Reports not retrieved', f'(n = {FLOW["not_retrieved"]})',
+     'Publisher full text unavailable', 'via UFSCar institutional login'], fontsize=7.5)
 arrow_right(flow_x + box_w/2 + phase_gap, retrieval_y, excl_x - excl_w/2 - phase_gap)
 
 # === ELIGIBILITY ===
 draw_box(flow_x, eligibility_y, box_w, box_h, f'Reports assessed for eligibility\n(n = {FLOW["assessed"]})')
 draw_excl(excl_x, eligibility_y, excl_w, excl_h,
-    [f'Reports excluded with reasons (n = {FLOW["full_text_excluded"]})',
+    ['Reports excluded with reasons', f'(n = {FLOW["full_text_excluded"]})',
      'EC3: no safety/verification/', 'hallucination focus'],
     bold_idx=0, fontsize=7.2)
 arrow_right(flow_x + box_w/2 + phase_gap, eligibility_y, excl_x - excl_w/2 - phase_gap)
@@ -128,9 +132,9 @@ arrow_down(flow_x, screening_y - box_h/2 - phase_gap, retrieval_y + box_h/2 + ph
 arrow_down(flow_x, retrieval_y - box_h/2 - phase_gap, eligibility_y + box_h/2 + phase_gap)
 arrow_down(flow_x, eligibility_y - box_h/2 - phase_gap, included_y + box_h/2 + phase_gap)
 
-plt.tight_layout()
+fig.subplots_adjust(left=0, right=1, bottom=0, top=1)
 OUT.mkdir(parents=True, exist_ok=True)
 for suffix in ('png', 'pdf'):
-    fig.savefig(OUT / f'prisma.{suffix}', dpi=300, bbox_inches='tight', facecolor='white', edgecolor='none')
+    fig.savefig(OUT / f'prisma.{suffix}', dpi=300, bbox_inches='tight', pad_inches=0, facecolor='white', edgecolor='none')
 plt.close()
 print('PRISMA figure saved successfully.')

@@ -10,7 +10,7 @@ The Zotero CSV files available in the working archive contain 98 imported rows. 
 
 ## Screening
 
-The final full-text set has 38 records: 35 included and 3 excluded. The three full-text exclusions are retained with their reasons in `data/screening/full_text_decisions.csv` and `data/studies.csv`. Of the 66 reports sought for retrieval, 28 were inaccessible because UFSCar institutional access/login did not provide the publisher PDFs; protected files are not redistributed.
+The final full-text set has 38 records: 35 included and 3 excluded. The three full-text exclusions are retained with their reasons in `data/screening/full_text_decisions.csv` and `data/studies.csv`. Of the 66 reports sought for retrieval, 28 could not be retrieved because the first author's UFSCar institutional login did not provide access to the publisher PDFs; protected files are not redistributed.
 
 The working screening archive contains 147 bibliographic entries and 131 title/abstract rows. The original first-triage export contains the aggregate row `AdjunctProceedings*`; the canonical archive separately lists the 17 proceedings/companion-volume records covered by that grouped decision in `data/screening/grouped_exclusions.csv`. Therefore, the reported 148 PRISMA screening units are 147 bibliographic records plus one aggregate proceedings row. The 82 excluded units comprise 65 non-included screening rows and the 17 grouped proceedings records; the aggregate row is not an additional primary study. The 66 title/abstract candidates, 28 not-retrieved reports, and 38 full-text decisions are now represented by explicit derived files.
 
