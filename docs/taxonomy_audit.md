@@ -7,7 +7,7 @@ The canonical extraction currently assigns the 35 included studies as follows:
 | A | Direct generation | 14 | 40.0% |
 | B | Static neuro-symbolic translation | 16 | 45.7% |
 | C | Formal verification without autonomous feedback | 2 | 5.7% |
-| D | Execution-aware recovery | 3 | 8.6% |
+| D | Runtime plan adaptation and recovery | 3 | 8.6% |
 | **Total** |  | **35** | **100.0%** |
 
 ## Boundary cases checked
@@ -20,4 +20,4 @@ The canonical extraction currently assigns the 35 included studies as follows:
 
 The older verification report claiming Group C=4 and Group D=1 is stale. It must not be used for tables or figures.
 
-The taxonomy figure crosses two dimensions: symbolic structure (none, lightweight/static, or formal) and autonomous feedback (absent or present). The two non-formal feedback cells are empty in the included corpus. Group D occupies the formal-plus-feedback cell in the observed corpus; formal verification is not the defining criterion of execution-aware recovery. The research gap is the absence of a Group-D system meeting the dynamic, unstructured deployment requirements.
+The taxonomy figure crosses two dimensions: Verification Formality Level (no formal verification, lightweight symbolic consistency checks, or formal verification against an explicit model or specification) and autonomous feedback (absent or present). The two non-formal feedback cells are empty in the included corpus. Group D occupies the formal-plus-feedback cell in the observed corpus; formal verification is not the defining criterion of runtime plan adaptation and recovery. The research gap is the absence of a Group-D system meeting the dynamic, unstructured deployment requirements.

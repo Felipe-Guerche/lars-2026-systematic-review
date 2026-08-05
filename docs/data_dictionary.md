@@ -36,6 +36,6 @@ Evidence columns use the prefix `evidence_` and correspond to the associated fie
 - **A — Direct generation:** LLM use without a formal symbolic parser or verifier.
 - **B — Static neuro-symbolic translation:** lightweight symbolic structure or one-shot translation without formal verification and autonomous recovery.
 - **C — Formal verification without autonomous feedback:** formal planning, verification, or unrealizability checking without an autonomous execution-recovery loop.
-- **D — Execution-aware recovery:** an execution-feedback loop changes or repairs the plan without a human decision at the recovery step. All three Group-D studies in this corpus also use formal symbolic verification, but that is an observed property rather than the defining criterion.
+- **D — Runtime plan adaptation and recovery:** runtime state changes, unmet preconditions, planning uncertainty, or updated environmental information can trigger plan revision, replanning, or escalation. All three Group-D studies in this corpus also use formal symbolic verification, but that is an observed property rather than the defining criterion.
 
-The group is a mutually exclusive study-level classification. It is not a measure of overall paper quality.
+The group is a mutually exclusive study-level classification. Verification Formality Levels are: Level 1, no formal verification; Level 2, lightweight symbolic consistency checks; and Level 3, formal verification against an explicit model or specification. Neither the group nor the level is a measure of overall paper quality.

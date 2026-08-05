@@ -2,6 +2,12 @@
 
 Reproducibility repository for the LARS 2026 systematic review of large language models in mobile robotics.
 
+## Versioned release
+
+The manuscript cites the clean, public reproducibility snapshot [`v1.0.7`](https://github.com/Felipe-Guerche/lars-2026-systematic-review/releases/tag/v1.0.7). It contains the canonical screening and extraction data, regenerated tables and figures, validation scripts, and provenance documentation used for the review.
+
+The package intentionally excludes publisher PDFs, local Zotero attachments, local file paths, and private working files. See the [release notes](docs/release_notes_v1.0.7.md) for the exact scope and validation record.
+
 ## Quick navigation
 
 - [Search archive and query strings](data/search/README.md)
@@ -10,6 +16,7 @@ Reproducibility repository for the LARS 2026 systematic review of large language
 - [Data dictionary](docs/data_dictionary.md)
 - [Protocol](docs/protocol.md)
 - [Provenance and limitations](docs/provenance.md)
+- [Release notes (v1.0.7)](docs/release_notes_v1.0.7.md)
 - [Generated tables and figures](results/README.md)
 - [Analysis scripts](scripts/README.md)
 - [Data license](DATA_LICENSE.md)
@@ -89,7 +96,7 @@ The scripts use repository-relative paths and write only to `results/`. The vali
 
 ## Important provenance note
 
-The source workspace contains 147 bibliographic entries and 131 explicit title/abstract rows. The reported 148 PRISMA screening units consist of those 147 records plus the original `AdjunctProceedings*` grouped proceedings row, which covers 17 administrative proceedings records listed in `data/screening/grouped_exclusions.csv`. The 28 not-retrieved candidates are listed in `data/screening/not_retrieved.csv`. Screening was performed by one primary reviewer, with no retained independent audit series for an agreement statistic. The repository does not redistribute publisher PDFs or local Zotero attachments.
+The source workspace contains 147 bibliographic entries and 131 explicit title/abstract rows. The reported 148 PRISMA screening units consist of those 147 records plus the original `AdjunctProceedings*` grouped proceedings row, which covers 17 administrative proceedings records listed in `data/screening/grouped_exclusions.csv`. The 28 not-retrieved candidates are listed in `data/screening/not_retrieved.csv`. Screening, full-text assessment, study-level extraction, and taxonomy coding were performed by the first author. No auditable independent second-reviewer decision series was retained; therefore, no inter-rater agreement statistic is reported. The repository does not redistribute publisher PDFs or local Zotero attachments.
 
 ## Licenses and data policy
 

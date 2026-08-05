@@ -15,6 +15,6 @@ The current generated outputs include the following linked tables and figures:
 | Top-ten challenges | [`challenge_frequency_top10.csv`](tables/challenge_frequency_top10.csv) | [`challenges_pareto.png`](figures/challenges_pareto.png) · [`challenges_pareto.pdf`](figures/challenges_pareto.pdf) |
 | Publication years | [`publication_years.csv`](tables/publication_years.csv) | — |
 | Taxonomy × validation | [`taxonomy_by_validation.csv`](tables/taxonomy_by_validation.csv) | — |
-| Expertise/safety by group | [`expertise_safety_by_group.csv`](tables/expertise_safety_by_group.csv) | [`expertise_safety.png`](figures/expertise_safety.png) · [`expertise_safety.pdf`](figures/expertise_safety.pdf) |
+| Verification formality by group | [`expertise_safety_by_group.csv`](tables/expertise_safety_by_group.csv) | [`expertise_safety.png`](figures/expertise_safety.png) · [`expertise_safety.pdf`](figures/expertise_safety.pdf) |
 | PRISMA flow | — | [`prisma.png`](figures/prisma.png) · [`prisma.pdf`](figures/prisma.pdf) |
 | Taxonomy matrix | — | [`taxonomy.png`](figures/taxonomy.png) · [`taxonomy.pdf`](figures/taxonomy.pdf) |

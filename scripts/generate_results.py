@@ -23,7 +23,7 @@ GROUP_LABELS = {
     "A": "Group A — Direct generation",
     "B": "Group B — Static neuro-symbolic",
     "C": "Group C — Formal verification",
-    "D": "Group D — Closed-loop recovery",
+    "D": "Group D — Runtime plan adaptation and recovery",
 }
 
 
@@ -126,18 +126,17 @@ def plot_tradeoff() -> None:
     levels = {"A": 1, "B": 2, "C": 3, "D": 3}
     counts = df["taxonomy_group"].value_counts().reindex(GROUP_ORDER).fillna(0)
     table = pd.DataFrame({"group": GROUP_ORDER, "label": [GROUP_LABELS[g] for g in GROUP_ORDER],
-                          "expertise_level": [levels[g] for g in GROUP_ORDER],
-                          "safety_level": [levels[g] for g in GROUP_ORDER],
+                          "verification_formality_level": [levels[g] for g in GROUP_ORDER],
                           "count": counts.astype(int).values})
     table["percentage"] = (table["count"] / len(df) * 100).round(1)
     table.to_csv(TABLES / "expertise_safety_by_group.csv", index=False)
     fig, ax = plt.subplots(figsize=(9, 5.5))
-    ax.bar(GROUP_ORDER, table["safety_level"], color=["#3498db", "#2ecc71", "#e67e22", "#9b59b6"])
+    ax.bar(GROUP_ORDER, table["verification_formality_level"], color=["#3498db", "#2ecc71", "#e67e22", "#9b59b6"])
     ax.set_xlabel("Taxonomy group")
-    ax.set_ylabel("Analytical safety level")
-    ax.set_title("Analytical safety level by taxonomy group")
+    ax.set_ylabel("Verification formality level")
+    ax.set_title("Verification formality level by taxonomy group")
     ax.set_ylim(0, 3.5)
-    for i, row in table.iterrows(): ax.text(i, row["safety_level"] + .08, f"n={row['count']}", ha="center")
+    for i, row in table.iterrows(): ax.text(i, row["verification_formality_level"] + .08, f"n={row['count']}", ha="center")
     save_figure(fig, "expertise_safety")
 
 

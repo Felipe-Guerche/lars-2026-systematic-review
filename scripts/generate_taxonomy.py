@@ -81,7 +81,7 @@ def main() -> None:
         (0, 0): ("A", "Direct Generation"),
         (1, 0): ("B", "Static Neuro-Symbolic"),
         (2, 0): ("C", "Formal Verification"),
-        (2, 1): ("D", "Execution-Aware Recovery"),
+        (2, 1): ("D", "Runtime Plan Adaptation and Recovery"),
     }
     for row in range(3):
         for col in range(2):

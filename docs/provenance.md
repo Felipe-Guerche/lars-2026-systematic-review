@@ -14,7 +14,7 @@ The final full-text set has 38 records: 35 included and 3 excluded. The three fu
 
 The working screening archive contains 147 bibliographic entries and 131 title/abstract rows. The original first-triage export contains the aggregate row `AdjunctProceedings*`; the canonical archive separately lists the 17 proceedings/companion-volume records covered by that grouped decision in `data/screening/grouped_exclusions.csv`. Therefore, the reported 148 PRISMA screening units are 147 bibliographic records plus one aggregate proceedings row. The 82 excluded units comprise 65 non-included screening rows and the 17 grouped proceedings records; the aggregate row is not an additional primary study. The 66 title/abstract candidates, 28 not-retrieved reports, and 38 full-text decisions are now represented by explicit derived files.
 
-Screening and extraction were performed by the primary reviewer. No independent second-reviewer decision series or audit table was retained, so inter-rater agreement statistics are not reported. Five snowballing papers are documented as counter-examples and are not part of the 35-study corpus.
+Screening, full-text assessment, study-level extraction, and taxonomy coding were performed by the first author. No auditable independent second-reviewer decision series was retained; therefore, no inter-rater agreement statistic is reported. Five snowballing papers are documented as counter-examples and are not part of the 35-study corpus.
 
 ## Analysis scope
 
