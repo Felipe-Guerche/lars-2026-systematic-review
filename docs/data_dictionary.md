@@ -36,6 +36,6 @@ Evidence columns use the prefix `evidence_` and correspond to the associated fie
 - **A — Direct generation:** LLM use without a formal symbolic parser or verifier.
 - **B — Static neuro-symbolic translation:** lightweight symbolic structure or one-shot translation without formal verification and autonomous recovery.
 - **C — Formal verification without autonomous feedback:** formal planning, verification, or unrealizability checking without an autonomous execution-recovery loop.
-- **D — Autonomous closed-loop recovery:** formal symbolic verification plus an execution-feedback loop that can trigger replanning without a human decision at the recovery step.
+- **D — Execution-aware recovery:** an execution-feedback loop changes or repairs the plan without a human decision at the recovery step. All three Group-D studies in this corpus also use formal symbolic verification, but that is an observed property rather than the defining criterion.
 
 The group is a mutually exclusive study-level classification. It is not a measure of overall paper quality.

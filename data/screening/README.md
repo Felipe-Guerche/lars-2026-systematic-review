@@ -2,7 +2,7 @@
 
 - `all_records.csv`: 147 bibliographic records available in the working archive, including 17 records mapped to the confirmed grouped `AdjunctProceedings*` exclusion.
 - `first_screening.csv`: 131 explicit title/abstract decisions from the original triage export, including the `AdjunctProceedings*` group row.
-- `grouped_exclusions.csv`: the 17 proceedings/companion-volume records covered by that group-level CE5 decision.
+- `grouped_exclusions.csv`: the 17 proceedings/companion-volume records covered by the grouped proceedings decision.
 - `not_retrieved.csv`: the 28 records included at title/abstract screening but not retrieved for full-text assessment.
 - `full_text_decisions.csv`: 38 full-text decisions, including 35 included studies and 3 exclusions.
 

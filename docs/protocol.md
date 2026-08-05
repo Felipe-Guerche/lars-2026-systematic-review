@@ -29,8 +29,8 @@ Searches covered Scopus, IEEE Xplore, and ACM Digital Library. The nine database
 ```text
 183 records identified
  35 duplicates removed
-148 records screened by title/abstract
- 82 records excluded at screening
+148 screening units screened by title/abstract
+ 82 screening units excluded at screening
  66 full-text reports sought
  28 reports not retrieved
  38 reports assessed for eligibility
@@ -38,4 +38,4 @@ Searches covered Scopus, IEEE Xplore, and ACM Digital Library. The nine database
  35 studies included
 ```
 
-The numerical flow is reproduced by `scripts/generate_prisma.py`. The provenance limitation concerning the 147 available bibliographic entries versus 148 reported screened records is documented in `docs/provenance.md`.
+The numerical flow is reproduced by `scripts/generate_prisma.py`. The 148 screening units comprise 147 bibliographic records plus the original `AdjunctProceedings*` aggregate row; the 82 exclusions comprise 65 non-included screening rows and 17 grouped proceedings records. The provenance limitation is documented in `docs/provenance.md`.

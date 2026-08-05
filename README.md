@@ -81,7 +81,7 @@ python -m pip install -r requirements.txt
 python scripts/validate_data.py
 python scripts/doublecheck_taxonomy.py
 python scripts/generate_results.py
-python scripts/generate_taxonomy_tree.py
+python scripts/generate_taxonomy.py
 python scripts/generate_prisma.py
 ```
 
