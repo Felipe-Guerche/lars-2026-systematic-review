@@ -45,6 +45,7 @@ docs/           Protocol, data dictionary, taxonomy, and provenance notes
 - `data/studies.csv` is the bibliographic and screening source for the 38 full-text records.
 - `data/extraction/study_extraction.csv` is the source for all study-level results and contains 35 rows.
 - `data/search/database_yields.csv` is the source for database and query yields.
+- `data/search/zotero_full_text.bib` is the sanitized Zotero-compatible export of the 38 full-text records; it contains metadata and DOIs, not abstracts or attachments.
 - `results/` contains generated outputs, not hand-edited values.
 
 ## Results at a glance
