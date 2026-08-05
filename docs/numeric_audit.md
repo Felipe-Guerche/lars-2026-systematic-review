@@ -26,8 +26,7 @@ The tables generated from `data/extraction/study_extraction.csv` were compared w
 | Misinterpretation | 7 (20.0%) | 7 | Match |
 | Physical constraints | 7 (20.0%) | 7 | Match |
 
-## Remaining textual mismatches
+## Remaining provenance limitation
 
-- The manuscript says the taxonomy has three existing categories and one empty category. The verified data has four non-empty groups, including three Group D studies.
-- The manuscript still states that the search was executed in July 2025; the repository records the final update as 3 November 2025.
-- The PRISMA counts are documented but the source archive still contains 147 bibliographic records against 148 reported after deduplication.
+- The PRISMA counts are documented, but the source archive still contains 147 bibliographic records against 148 reported after deduplication and 17 records without explicit first-screening decisions. This limitation is documented rather than silently filled.
+- The article treats all cross-study comparisons as descriptive/exploratory and reports no inferential statistics.

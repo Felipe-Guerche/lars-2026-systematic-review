@@ -13,9 +13,9 @@ assert FLOW['screened'] - FLOW['screening_excluded'] == FLOW['retrieval_sought']
 assert FLOW['retrieval_sought'] - FLOW['not_retrieved'] == FLOW['assessed']
 assert FLOW['assessed'] - FLOW['full_text_excluded'] == FLOW['included']
 
-fig, ax = plt.subplots(figsize=(10, 13))
+fig, ax = plt.subplots(figsize=(10, 15))
 ax.set_xlim(0, 12)
-ax.set_ylim(0, 14.5)
+ax.set_ylim(0, 16)
 ax.set_aspect('equal')
 ax.axis('off')
 
@@ -61,10 +61,11 @@ ax.text(5, 13.65, 'Identification of studies via databases and registers',
 
 # === PHASE LABELS ===
 phase_data = [
-    ('Identification', 11.5, 2.0),
-    ('Screening', 9.0, 2.5),
-    ('Eligibility', 6.0, 2.5),
-    ('Included', 3.5, 1.5),
+    ('Identification', 12.8, 2.0),
+    ('Screening', 10.2, 1.5),
+    ('Retrieval', 7.6, 1.5),
+    ('Eligibility', 5.0, 1.5),
+    ('Included', 2.4, 1.5),
 ]
 for label, cy, h in phase_data:
     ax.add_patch(patches.FancyBboxPatch((0.05, cy - h/2), 0.35, h,
@@ -73,32 +74,40 @@ for label, cy, h in phase_data:
         fontsize=8, fontweight='bold', color='white', rotation=90)
 
 # === IDENTIFICATION ===
-draw_box(5.0, 11.5, box_w, box_h, f'Records identified from:\nDatabases (n = {FLOW["identified"]})')
-draw_excl(excl_x, 11.5, excl_w, excl_h,
+draw_box(5.0, 12.8, box_w, box_h,
+    f'Records identified from databases\nScopus 99 | IEEE Xplore 45 | ACM DL 39\n(n = {FLOW["identified"]})', fontsize=7.8)
+draw_excl(excl_x, 12.8, excl_w, excl_h,
     ['Records removed before', 'screening:', 'Duplicate records removed', f'(n = {FLOW["duplicates"]})'],
     bold_idx=None, fontsize=7.5)
-arrow_right(5.0 + box_w/2, 11.5, excl_x - excl_w/2)
+arrow_right(5.0 + box_w/2, 12.8, excl_x - excl_w/2)
 
 # === SCREENING ===
-draw_box(5.0, 9.0, box_w, box_h, f'Records screened\n(n = {FLOW["screened"]})')
-draw_excl(excl_x, 9.0, excl_w, excl_h,
+draw_box(5.0, 10.2, box_w, box_h, f'Records screened\n(n = {FLOW["screened"]})')
+draw_excl(excl_x, 10.2, excl_w, excl_h,
     ['Records excluded', f'(n = {FLOW["screening_excluded"]})'], fontsize=8)
-arrow_right(5.0 + box_w/2, 9.0, excl_x - excl_w/2)
+arrow_right(5.0 + box_w/2, 10.2, excl_x - excl_w/2)
+
+# === RETRIEVAL ===
+draw_box(5.0, 7.6, box_w, box_h, f'Reports sought for retrieval\n(n = {FLOW["retrieval_sought"]})')
+draw_excl(excl_x, 7.6, excl_w, excl_h,
+    ['Reports not retrieved', f'(n = {FLOW["not_retrieved"]})'], fontsize=8)
+arrow_right(5.0 + box_w/2, 7.6, excl_x - excl_w/2)
 
 # === ELIGIBILITY ===
-draw_box(5.0, 6.0, box_w, box_h, f'Reports assessed for eligibility\n(n = {FLOW["assessed"]})')
-draw_excl(excl_x, 6.0, excl_w, excl_h,
+draw_box(5.0, 5.0, box_w, box_h, f'Reports assessed for eligibility\n(n = {FLOW["assessed"]})')
+draw_excl(excl_x, 5.0, excl_w, excl_h,
     [f'Reports excluded (n = {FLOW["full_text_excluded"]})', 'EC3: no safety/verification/', 'hallucination focus'],
     bold_idx=0, fontsize=7.5)
-arrow_right(5.0 + box_w/2, 6.0, excl_x - excl_w/2)
+arrow_right(5.0 + box_w/2, 5.0, excl_x - excl_w/2)
 
 # === INCLUDED ===
-draw_box(5.0, 3.5, box_w, box_h, f'Studies included in review\n(n = {FLOW["included"]})', bold=True)
+draw_box(5.0, 2.4, box_w, box_h, f'Studies included in review\n(n = {FLOW["included"]})', bold=True)
 
 # === ARROWS DOWN ===
-arrow_down(5.0, 11.5 - box_h/2, 9.0 + box_h/2)
-arrow_down(5.0, 9.0 - box_h/2, 6.0 + box_h/2)
-arrow_down(5.0, 6.0 - box_h/2, 3.5 + box_h/2)
+arrow_down(5.0, 12.8 - box_h/2, 10.2 + box_h/2)
+arrow_down(5.0, 10.2 - box_h/2, 7.6 + box_h/2)
+arrow_down(5.0, 7.6 - box_h/2, 5.0 + box_h/2)
+arrow_down(5.0, 5.0 - box_h/2, 2.4 + box_h/2)
 
 plt.tight_layout()
 OUT.mkdir(parents=True, exist_ok=True)

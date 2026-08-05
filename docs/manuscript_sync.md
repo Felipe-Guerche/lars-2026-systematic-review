@@ -1,14 +1,17 @@
 # Manuscript synchronization checklist
 
-The repository is the cleaned reference package. The manuscript still needs synchronization before submission.
+The manuscript and supplementary material use the repository's canonical extraction and taxonomy data. The repository is prepared locally; publication and final typesetting remain release steps.
 
-- Replace the July 2025 search wording with the final 3 November 2025 update date and partial November coverage.
-- Keep the database yields as Scopus 99, IEEE Xplore 45, ACM Digital Library 39, after checking the raw-search provenance.
-- Keep the verified taxonomy distribution: A=14, B=16, C=2, D=3. Remove any sentence saying that Group D is empty.
-- Replace the stale sentence that says the taxonomy has three existing categories and one empty category.
-- Link the paper to this repository and a versioned release.
-- State that the analysis is descriptive; cross-tabulations are exploratory and not inferential statistics.
-- Resolve the 147-versus-148 screening-record discrepancy and the 17 records without explicit first-screening decisions.
-- Verify or remove the reported 20% second-reviewer agreement. The public package currently records one missing evidence field for `Patton2024` and does not contain the 30-record audit table.
+- [x] Final search/update date: 3 November 2025, with partial November coverage.
+- [x] Database yields: Scopus 99, IEEE Xplore 45, ACM Digital Library 39; total 183.
+- [x] PRISMA flow: 183 -> 148 -> 66 -> 38 -> 35, with 35 duplicates, 82 title/abstract exclusions, 28 reports not retrieved, and 3 full-text exclusions.
+- [x] Taxonomy distribution: A=14, B=16, C=2, D=3.
+- [x] Related surveys and the four manuscript contributions are identified without claiming that prior reviews are absent.
+- [x] Screening language reports one primary reviewer and no unsupported agreement statistic.
+- [x] Cross-study comparisons are labelled descriptive/exploratory; no inferential tests are reported.
+- [x] The 147-versus-148 archive discrepancy and 17 records without explicit decisions are declared in `docs/provenance.md` rather than fabricated.
+- [ ] Publish the repository and create a versioned release before submission.
+- [ ] Reconcile the 147-versus-148 discrepancy and the 17 missing first-screening decisions if a complete PRISMA archive is required.
+- [ ] Compile the final IEEE manuscript and confirm the six-page limit.
 
-The repository does not silently modify the manuscript claims; this file keeps the remaining synchronization work visible.
+The repository does not redistribute publisher PDFs, protected files, or local Zotero attachments.
