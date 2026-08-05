@@ -4,11 +4,27 @@ Reproducibility repository for the LARS 2026 systematic review of large language
 
 ## Versioned release
 
-The manuscript cites the clean, public reproducibility snapshot [`v1.0.8`](https://github.com/Felipe-Guerche/lars-2026-systematic-review/releases/tag/v1.0.8). It contains the canonical screening and extraction data, regenerated tables and figures, validation scripts, and provenance documentation used for the review.
+The manuscript cites the clean, public reproducibility snapshot [`v1.0.9`](https://github.com/Felipe-Guerche/lars-2026-systematic-review/releases/tag/v1.0.9). It contains the canonical screening and extraction data, regenerated tables and figures, validation scripts, and provenance documentation used for the review.
 
 **Repository development and maintenance:** Felipe Delduque Guerche (`Felipe-Guerche`). The associated article has its own scientific author list; repository development credit is documented separately.
 
-The package intentionally excludes publisher PDFs, local Zotero attachments, local file paths, and private working files. See the [release notes](docs/release_notes_v1.0.8.md) for the exact scope and validation record.
+The package intentionally excludes publisher PDFs, local Zotero attachments, local file paths, and private working files. See the [release notes](docs/release_notes_v1.0.9.md) for the exact scope and validation record.
+
+## Citation
+
+For the repository and its reproducibility artifacts, cite the versioned snapshot:
+
+```bibtex
+@misc{guerche2026larsrepo,
+  author  = {Guerche, Felipe Delduque},
+  title   = {LARS 2026 systematic review reproducibility repository},
+  year    = {2026},
+  version = {1.0.9},
+  url     = {https://github.com/Felipe-Guerche/lars-2026-systematic-review/releases/tag/v1.0.9}
+}
+```
+
+The repository also provides machine-readable citation metadata in [`CITATION.cff`](CITATION.cff). Cite the associated scientific article separately for its findings.
 
 ## Quick navigation
 
@@ -18,7 +34,8 @@ The package intentionally excludes publisher PDFs, local Zotero attachments, loc
 - [Data dictionary](docs/data_dictionary.md)
 - [Protocol](docs/protocol.md)
 - [Provenance and limitations](docs/provenance.md)
-- [Release notes (v1.0.8)](docs/release_notes_v1.0.8.md)
+- [Release notes (v1.0.9)](docs/release_notes_v1.0.9.md)
+- [Citation metadata](CITATION.cff)
 - [Generated tables and figures](results/README.md)
 - [Analysis scripts](scripts/README.md)
 - [Data license](DATA_LICENSE.md)

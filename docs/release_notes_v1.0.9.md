@@ -1,4 +1,4 @@
-# v1.0.8 — Reproducibility package
+# v1.0.9 — Reproducibility package
 
 This release is the public reproducibility snapshot cited by the LARS 2026 systematic review.
 
@@ -12,6 +12,7 @@ Repository development, release engineering, and maintenance are credited to **F
 - Regenerated result tables and publication figures.
 - Validation and figure-generation scripts with repository-relative paths.
 - Updated taxonomy documentation, provenance notes, and manuscript synchronization checklist.
+- Added `CITATION.cff` and a repository citation block to the README.
 - Corrected terminology for the four taxonomy groups and Verification Formality Level.
 
 ## Validated snapshot

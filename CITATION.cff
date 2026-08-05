@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite it as follows."
+title: "LARS 2026 systematic review reproducibility repository"
+type: software
+authors:
+  - family-names: Guerche
+    given-names: Felipe Delduque
+    affiliation: Federal University of São Carlos
+version: "1.0.9"
+date-released: 2026-08-05
+repository-code: "https://github.com/Felipe-Guerche/lars-2026-systematic-review"
+url: "https://github.com/Felipe-Guerche/lars-2026-systematic-review/releases/tag/v1.0.9"
+license: MIT
+keywords:
+  - systematic review
+  - mobile robotics
+  - large language models
+  - reproducible research
