@@ -1,6 +1,10 @@
-# v1.0.7 — Reproducibility package
+# v1.0.8 — Reproducibility package
 
 This release is the public reproducibility snapshot cited by the LARS 2026 systematic review.
+
+## Authorship and maintenance
+
+Repository development, release engineering, and maintenance are credited to **Felipe Delduque Guerche** (`Felipe-Guerche`). The associated article has a separate scientific author list; repository development credit should not be inferred from the article authorship.
 
 ## Included
 
