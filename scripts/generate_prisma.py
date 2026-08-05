@@ -16,7 +16,7 @@ assert FLOW['retrieval_sought'] - FLOW['not_retrieved'] == FLOW['assessed']
 assert FLOW['assessed'] - FLOW['full_text_excluded'] == FLOW['included']
 
 fig, ax = plt.subplots(figsize=(10, 15))
-ax.set_xlim(0, 12)
+ax.set_xlim(-0.2, 12)
 ax.set_ylim(0, 16)
 ax.set_aspect('equal')
 ax.axis('off')
@@ -28,7 +28,7 @@ box_w = 4.2
 box_h = 1.05
 excl_w = 3.8
 excl_h = 1.15
-layout_shift = -0.30
+layout_shift = -0.50
 flow_x = 5.0 + layout_shift
 excl_x = 9.5 + layout_shift
 header_x, header_y, header_w, header_h = 0.5 + layout_shift, 14.2, 9.0, 0.7
