@@ -4,15 +4,14 @@ The manuscript and supplementary material use the repository's canonical extract
 
 - [x] Final search/update date: 3 November 2025, with partial November coverage.
 - [x] Database yields: Scopus 99, IEEE Xplore 45, ACM Digital Library 39; total 183.
-- [x] PRISMA flow: 183 -> 148 -> 66 -> 38 -> 35, with 35 duplicates, 82 title/abstract exclusions, 28 reports not retrieved, and 3 full-text exclusions.
+- [x] PRISMA flow: 183 -> 148 -> 66 -> 38 -> 35, with 35 duplicates, 82 title/abstract exclusions, 28 reports not retrieved, and 3 full-text exclusions; the 148 screening units include one grouped proceedings row covering 17 administrative records.
 - [x] Taxonomy distribution: A=14, B=16, C=2, D=3.
 - [x] Directly related reviews on robotic grounding, LLM--robot integration, LLM planning, and planning formalization are identified without claiming that prior reviews are absent.
 - [x] Screening and extraction language reports one primary reviewer and no unsupported agreement statistic.
 - [x] The 28 reports not retrieved are attributed to unavailable UFSCar institutional access to publisher PDFs.
 - [x] Cross-study comparisons are labelled descriptive/exploratory; no inferential tests are reported.
-- [x] The 147-versus-148 archive discrepancy and 17 records without explicit decisions are declared in `docs/provenance.md` rather than fabricated.
+- [x] The 147-versus-148 difference is reconciled: 147 bibliographic records plus the original `AdjunctProceedings*` grouped row; the 17 mapped proceedings records and 28 not-retrieved candidates have explicit files.
 - [ ] Publish the repository and create a versioned release before submission.
-- [ ] Reconcile the 147-versus-148 discrepancy and the 17 missing first-screening decisions if a complete PRISMA archive is required.
-- [ ] Compile the final IEEE manuscript and confirm the six-page limit.
+- [x] Compile the final IEEE manuscript and confirm the six-page limit (6 pages).
 
 The repository does not redistribute publisher PDFs, protected files, or local Zotero attachments.

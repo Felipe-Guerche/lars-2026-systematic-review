@@ -50,7 +50,7 @@ The scripts use repository-relative paths and write only to `results/`.
 
 ## Important provenance note
 
-The source workspace contains 147 bibliographic entries and 131 explicit title/abstract decisions, while the manuscript reports 148 post-deduplication records. This discrepancy and the 17 records without explicit first-screening decisions are preserved in `docs/provenance.md`; the package does not claim a complete record-level reconstruction until they are reconciled. Screening was performed by one primary reviewer, with no retained independent audit series for an agreement statistic. The repository does not redistribute publisher PDFs or local Zotero attachments.
+The source workspace contains 147 bibliographic entries and 131 explicit title/abstract rows. The reported 148 PRISMA screening units consist of those 147 records plus the original `AdjunctProceedings*` grouped proceedings row, which covers 17 administrative proceedings records listed in `data/screening/grouped_exclusions.csv`. The 28 not-retrieved candidates are listed in `data/screening/not_retrieved.csv`. Screening was performed by one primary reviewer, with no retained independent audit series for an agreement statistic. The repository does not redistribute publisher PDFs or local Zotero attachments.
 
 ## Licenses
 

@@ -26,7 +26,7 @@ The tables generated from `data/extraction/study_extraction.csv` were compared w
 | Misinterpretation | 7 (20.0%) | 7 | Match |
 | Physical constraints | 7 (20.0%) | 7 | Match |
 
-## Remaining provenance limitation
+## Resolved provenance note
 
-- The PRISMA counts are documented, but the source archive still contains 147 bibliographic records against 148 reported after deduplication and 17 records without explicit first-screening decisions. This limitation is documented rather than silently filled.
+- The 147 bibliographic records and the original `AdjunctProceedings*` grouped row account for the reported 148 screening units. The 17 grouped proceedings records and 28 not-retrieved candidates are explicit in `data/screening/`.
 - The article treats all cross-study comparisons as descriptive/exploratory and reports no inferential statistics.

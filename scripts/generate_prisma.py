@@ -82,7 +82,7 @@ draw_excl(excl_x, 12.8, excl_w, excl_h,
 arrow_right(5.0 + box_w/2, 12.8, excl_x - excl_w/2)
 
 # === SCREENING ===
-draw_box(5.0, 10.2, box_w, box_h, f'Records screened\n(n = {FLOW["screened"]})')
+draw_box(5.0, 10.2, box_w, box_h, f'Records screened\n(n = {FLOW["screened"]})\n147 records + 1 grouped row', fontsize=7.5)
 draw_excl(excl_x, 10.2, excl_w, excl_h,
     ['Records excluded', f'(n = {FLOW["screening_excluded"]})'], fontsize=8)
 arrow_right(5.0 + box_w/2, 10.2, excl_x - excl_w/2)

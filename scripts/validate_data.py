@@ -16,6 +16,22 @@ def main() -> None:
     studies = read_csv(ROOT / "data/studies.csv")
     extraction = read_csv(ROOT / "data/extraction/study_extraction.csv")
     taxonomy = read_csv(ROOT / "data/extraction/taxonomy_membership.csv")
+    all_records = read_csv(ROOT / "data/screening/all_records.csv")
+    grouped = read_csv(ROOT / "data/screening/grouped_exclusions.csv")
+    not_retrieved = read_csv(ROOT / "data/screening/not_retrieved.csv")
+
+    assert len(all_records) == 147
+    assert Counter(row["screening_decision"] for row in all_records) == Counter({
+        "include": 66,
+        "exclude": 62,
+        "exclude_grouped": 17,
+        "uncertain (potential exclusion)": 2,
+    })
+    assert len(grouped) == 17
+    assert all(row["group_id"] == "AdjunctProceedings*" for row in grouped)
+    assert len(not_retrieved) == 28
+    assert all(row["screening_decision"] == "include" for row in not_retrieved)
+    assert all(row["retrieval_reason"] for row in not_retrieved)
 
     assert len(studies) == 38, f"expected 38 full-text records, got {len(studies)}"
     assert Counter(row["screening_status"] for row in studies) == Counter({"included": 35, "excluded_full_text": 3})
@@ -42,6 +58,7 @@ def main() -> None:
             evidence = "evidence_" + field
             if row[field] and evidence in row and not row[evidence]:
                 missing_evidence.append((row["study_id"], field))
+    print(f"OK: {len(all_records)} bibliographic records; {len(grouped)} grouped exclusions; {len(not_retrieved)} not retrieved")
     print(f"OK: {len(studies)} full-text records, {len(extraction)} included studies")
     print(f"Groups: {dict(Counter(row['taxonomy_group'] for row in extraction))}")
     print(f"Validation: {dict(Counter(row['validation_method'] for row in extraction))}")
