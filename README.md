@@ -4,11 +4,11 @@ Reproducibility repository for the LARS 2026 systematic review of large language
 
 ## Versioned release
 
-The manuscript cites the clean, public reproducibility snapshot [`v1.0.13`](https://github.com/Felipe-Guerche/lars-2026-systematic-review/releases/tag/v1.0.13). It contains the canonical screening and extraction data (46 included studies), the supplementary open-access retrieval coding, the manuscript supplement (`docs/SR_supplement.md`), regenerated tables and figures, validation scripts, and provenance documentation used for the review. See the [release notes](docs/release_notes_v1.0.13.md).
+The manuscript cites the clean, public reproducibility snapshot [`v1.1`](https://github.com/Felipe-Guerche/lars-2026-systematic-review/releases/tag/v1.1). It contains the canonical screening and extraction data (46 included studies), the supplementary open-access retrieval coding, the manuscript supplement (`docs/SR_supplement.md`), regenerated tables and figures, validation scripts, and provenance documentation used for the review. See the [release notes](docs/release_notes_v1.1.md).
 
 **Repository development and maintenance:** Felipe Delduque Guerche (`Felipe-Guerche`). The associated article has its own scientific author list; repository development credit is documented separately.
 
-The package intentionally excludes publisher PDFs, local Zotero attachments, local file paths, and private working files. See the [release notes](docs/release_notes_v1.0.13.md) for the exact scope and validation record.
+The package intentionally excludes publisher PDFs, local Zotero attachments, local file paths, and private working files. See the [release notes](docs/release_notes_v1.1.md) for the exact scope and validation record.
 
 ## Citation
 
@@ -19,8 +19,8 @@ For the repository and its reproducibility artifacts, cite the versioned snapsho
   author  = {Guerche, Felipe Delduque},
   title   = {LARS 2026 systematic review reproducibility repository},
   year    = {2026},
-  version = {1.0.13},
-  url     = {https://github.com/Felipe-Guerche/lars-2026-systematic-review/releases/tag/v1.0.13}
+  version = {1.1},
+  url     = {https://github.com/Felipe-Guerche/lars-2026-systematic-review/releases/tag/v1.1}
 }
 ```
 
@@ -34,7 +34,7 @@ The repository also provides machine-readable citation metadata in [`CITATION.cf
 - [Data dictionary](docs/data_dictionary.md)
 - [Protocol](docs/protocol.md)
 - [Provenance and limitations](docs/provenance.md)
-- [Release notes (v1.0.13)](docs/release_notes_v1.0.13.md)
+- [Release notes (v1.1)](docs/release_notes_v1.1.md)
 - [Citation metadata](CITATION.cff)
 - [Generated tables and figures](results/README.md)
 - [Analysis scripts](scripts/README.md)
