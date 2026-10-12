@@ -7,8 +7,8 @@ ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / 'results/figures'
 FLOW = {'identified': 183, 'duplicates': 35, 'screened': 148, 'screening_excluded': 82,
         'screening_nonincluded_rows': 65, 'grouped_proceedings': 17,
-        'retrieval_sought': 66, 'not_retrieved': 28, 'assessed': 38,
-        'full_text_excluded': 3, 'included': 35}
+        'retrieval_sought': 66, 'not_retrieved': 11, 'assessed': 55,
+        'full_text_excluded': 9, 'included': 46}
 assert FLOW['identified'] - FLOW['duplicates'] == FLOW['screened']
 assert FLOW['screened'] - FLOW['screening_excluded'] == FLOW['retrieval_sought']
 assert FLOW['screening_nonincluded_rows'] + FLOW['grouped_proceedings'] == FLOW['screening_excluded']
@@ -111,14 +111,14 @@ arrow_right(flow_x + box_w/2 + phase_gap, screening_y, excl_x - excl_w/2 - phase
 draw_box(flow_x, retrieval_y, box_w, box_h, f'Reports sought for retrieval\n(n = {FLOW["retrieval_sought"]})')
 draw_excl(excl_x, retrieval_y, excl_w, excl_h,
     ['Reports not retrieved', f'(n = {FLOW["not_retrieved"]})',
-     'Publisher full text unavailable', 'via UFSCar institutional login'], fontsize=7.5)
+     '10 with no open-access version;', '1 bot-blocked (OA retrieval, 2026)'], fontsize=7.5)
 arrow_right(flow_x + box_w/2 + phase_gap, retrieval_y, excl_x - excl_w/2 - phase_gap)
 
 # === ELIGIBILITY ===
 draw_box(flow_x, eligibility_y, box_w, box_h, f'Reports assessed for eligibility\n(n = {FLOW["assessed"]})')
 draw_excl(excl_x, eligibility_y, excl_w, excl_h,
     ['Reports excluded with reasons', f'(n = {FLOW["full_text_excluded"]})',
-     'EC3: no safety/verification/', 'hallucination focus'],
+     'EC3: 8 (no safety/verification/', 'hallucination focus); EC1: 1'],
     bold_idx=0, fontsize=7.2)
 arrow_right(flow_x + box_w/2 + phase_gap, eligibility_y, excl_x - excl_w/2 - phase_gap)
 
