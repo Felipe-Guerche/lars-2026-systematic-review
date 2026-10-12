@@ -19,6 +19,6 @@ The public reproducibility snapshot is versioned as release **v1.0.13** (corpus 
 - [x] Bibliography metadata audited (47 entries) and 11 new study references added with verified
       titles/authors/venues/DOIs.
 - [x] Cross-study comparisons labelled descriptive/exploratory; no inferential tests reported.
-- [x] Compile the final IEEE manuscript and confirm the six-page limit (6 pages, verified 2026-08-06).
+- [x] Compile the final IEEE manuscript and confirm the six-page limit (6 pages, verified 2026-10-12).
 
 The repository does not redistribute publisher PDFs, protected files, or local Zotero attachments.

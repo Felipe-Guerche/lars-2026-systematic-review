@@ -171,7 +171,7 @@ Counter-example audit table (Section 3.5 of the main paper):
 | LLM+P (Liu et al., 2023) | No autonomous feedback (one-shot translation) |
 | Reflexion (Shinn et al., 2023) | No formal verification; non-robotic benchmarks |
 
-Traceability from corpus evidence to candidate requirements (Section VI of the main paper):
+Traceability from corpus evidence to candidate requirements (Section V of the main paper):
 
 | Barrier | Corpus evidence | Requirement |
 |---|---|---|

@@ -8,7 +8,7 @@ The manuscript cites the clean, public reproducibility snapshot [`v1.0.13`](http
 
 **Repository development and maintenance:** Felipe Delduque Guerche (`Felipe-Guerche`). The associated article has its own scientific author list; repository development credit is documented separately.
 
-The package intentionally excludes publisher PDFs, local Zotero attachments, local file paths, and private working files. See the [release notes](docs/release_notes_v1.0.12.md) for the exact scope and validation record.
+The package intentionally excludes publisher PDFs, local Zotero attachments, local file paths, and private working files. See the [release notes](docs/release_notes_v1.0.13.md) for the exact scope and validation record.
 
 ## Citation
 
