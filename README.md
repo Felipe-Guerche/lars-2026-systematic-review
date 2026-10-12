@@ -4,7 +4,7 @@ Reproducibility repository for the LARS 2026 systematic review of large language
 
 ## Versioned release
 
-The manuscript cites the clean, public reproducibility snapshot [`v1.0.9`](https://github.com/Felipe-Guerche/lars-2026-systematic-review/releases/tag/v1.0.9). It contains the canonical screening and extraction data, regenerated tables and figures, validation scripts, and provenance documentation used for the review.
+The manuscript cites the clean, public reproducibility snapshot [`v1.0.10`](https://github.com/Felipe-Guerche/lars-2026-systematic-review/releases/tag/v1.0.10). It contains the canonical screening and extraction data (46 included studies), the supplementary open-access retrieval coding, regenerated tables and figures, validation scripts, and provenance documentation used for the review. See the [release notes](docs/release_notes_v1.0.10.md).
 
 **Repository development and maintenance:** Felipe Delduque Guerche (`Felipe-Guerche`). The associated article has its own scientific author list; repository development credit is documented separately.
 
@@ -19,8 +19,8 @@ For the repository and its reproducibility artifacts, cite the versioned snapsho
   author  = {Guerche, Felipe Delduque},
   title   = {LARS 2026 systematic review reproducibility repository},
   year    = {2026},
-  version = {1.0.9},
-  url     = {https://github.com/Felipe-Guerche/lars-2026-systematic-review/releases/tag/v1.0.9}
+  version = {1.0.10},
+  url     = {https://github.com/Felipe-Guerche/lars-2026-systematic-review/releases/tag/v1.0.10}
 }
 ```
 

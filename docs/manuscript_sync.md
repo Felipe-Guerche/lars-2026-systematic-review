@@ -1,19 +1,23 @@
 # Manuscript synchronization checklist
 
-The manuscript and supplementary material use the repository's canonical extraction and taxonomy data. The public reproducibility snapshot is versioned as release v1.0.9.
+The manuscript and supplementary material use the repository's canonical extraction and taxonomy data.
+The public reproducibility snapshot is versioned as release **v1.0.10** (corpus frozen 2026-08-06).
 
-- [x] Final search/update date: 3 November 2025, with partial November coverage.
+- [x] Final search/update date: 3 November 2025, with partial November coverage (unchanged).
 - [x] Database yields: Scopus 99, IEEE Xplore 45, ACM Digital Library 39; total 183.
-- [x] PRISMA flow: 183 -> 148 -> 66 -> 38 -> 35, with 35 duplicates, 82 title/abstract exclusions, 28 reports not retrieved, and 3 full-text exclusions; the 148 screening units include one grouped proceedings row covering 17 administrative records.
-- [x] Taxonomy distribution: A=14, B=16, C=2, D=3.
-- [x] Repository development and release maintenance are credited separately to Felipe Delduque Guerche.
-- [x] Repository citation metadata is provided in `CITATION.cff` and credits Felipe Delduque Guerche as the repository author.
-- [x] Directly related reviews on robotic grounding, LLM--robot integration, LLM planning, and planning formalization are identified without claiming that prior reviews are absent.
-- [x] Screening, full-text assessment, study-level extraction, and taxonomy coding are attributed to the first author; no auditable independent second-reviewer decision series or inter-rater agreement statistic is reported.
-- [x] The 28 reports not retrieved are attributed to unavailable UFSCar institutional access to publisher PDFs.
-- [x] Cross-study comparisons are labelled descriptive/exploratory; no inferential tests are reported.
-- [x] The 147-versus-148 difference is reconciled: 147 bibliographic records plus the original `AdjunctProceedings*` grouped row; the 17 mapped proceedings records and 28 not-retrieved candidates have explicit files.
-- [x] Publish the repository and create the versioned release v1.0.9 before submission.
-- [x] Compile the final IEEE manuscript and confirm the six-page limit (6 pages).
+- [x] PRISMA flow: 183 -> 148 -> 66 -> 55 -> 46, with 35 duplicates, 82 title/abstract exclusions,
+      11 reports not retrieved (10 without OA version + 1 bot-blocked), and 9 full-text exclusions;
+      the 148 screening units include one grouped proceedings row covering 17 administrative records.
+- [x] Supplementary open-access retrieval round (August 2026) documented separately from the search
+      snapshot: 18 recovered, 17 assessed (11 included, 6 excluded), 1 unobtainable.
+- [x] Taxonomy distribution: A=18 (39.1%), B=18 (39.1%), C=4 (8.7%), D=6 (13.0%); Group D spans all
+      three verification-formality levels.
+- [x] RQ1-RQ5 counts regenerated from the 46-row extraction table (numeric_audit.md all Match).
+- [x] Single-coder screening/extraction/adjudication declared in the article (Threats to Validity).
+- [x] Repository citation metadata (`CITATION.cff`, README) points to release v1.0.10.
+- [x] Bibliography metadata audited (47 entries) and 11 new study references added with verified
+      titles/authors/venues/DOIs.
+- [x] Cross-study comparisons labelled descriptive/exploratory; no inferential tests reported.
+- [x] Compile the final IEEE manuscript and confirm the six-page limit (6 pages, verified 2026-08-06).
 
 The repository does not redistribute publisher PDFs, protected files, or local Zotero attachments.
