@@ -6,10 +6,10 @@ authors:
   - family-names: Guerche
     given-names: Felipe Delduque
     affiliation: Federal University of São Carlos
-version: "1.0.11"
+version: "1.0.12"
 date-released: 2026-10-12
 repository-code: "https://github.com/Felipe-Guerche/lars-2026-systematic-review"
-url: "https://github.com/Felipe-Guerche/lars-2026-systematic-review/releases/tag/v1.0.11"
+url: "https://github.com/Felipe-Guerche/lars-2026-systematic-review/releases/tag/v1.0.12"
 license: MIT
 keywords:
   - systematic review

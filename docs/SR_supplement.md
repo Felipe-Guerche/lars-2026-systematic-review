@@ -73,6 +73,11 @@ Anywhere:("Mobile Robot" OR "Autonomous Robot") AND ("Hospital Logistics" OR "He
 | IEEE Xplore | 45 |
 | ACM Digital Library | 39 |
 | **Combined (pre-dedup)** | **183** |
+
+**Original screening flow before supplementary retrieval** (historical; the flow cited in the article):
+
+| Step | Records |
+|------|---------|
 | Duplicate records removed | 35 |
 | Records screened by title/abstract | 148 |
 | Records excluded at title/abstract screening | 82 |
@@ -82,9 +87,19 @@ Anywhere:("Mobile Robot" OR "Autonomous Robot") AND ("Hospital Logistics" OR "He
 | Full-text reports excluded | 3 |
 | **Studies included** | **35** |
 
+**Final flow after the supplementary open-access retrieval round** (the counts used throughout the article):
+
+| Step | Reports |
+|------|---------|
+| Full-text reports sought | 66 |
+| Reports not retrieved | 11 |
+| Reports assessed for eligibility | 55 |
+| Full-text reports excluded | 9 |
+| **Studies included** | **46** |
+
 The 148 screening units comprise the 147 bibliographic records in the working archive plus the original aggregate `AdjunctProceedings*` row. The 82 excluded units comprise 65 non-included screening rows (63 explicit exclusions and 2 uncertain rows) and the 17 proceedings/companion-volume records covered by the grouped decision in `data/screening/grouped_exclusions.csv`; these administrative records are not additional primary studies. The grouped proceedings decision is separate from the EC1--EC3 full-text eligibility criteria.
 
-The 28 reports not retrieved could not be obtained because the first author's UFSCar institutional login did not provide access to the publisher PDFs. The record-level list is in `data/screening/not_retrieved.csv`; protected publisher files were not redistributed.
+In the original review, 28 reports could not be obtained because the first author's UFSCar institutional login did not provide access to the publisher PDFs. After the supplementary round, **11 reports remain not retrieved** (10 with no open-access version found and 1 bot-blocked); the record-level list is in `data/screening/not_retrieved.csv` (11 rows), and the round's per-report coding is in `data/screening/oa_retrieval_coding.csv`. Protected publisher files were not redistributed.
 
 **Retrieval bias:** The observed absence of a complete closed-loop neuro-symbolic recovery architecture should be interpreted as a finding within the retrieved and assessed corpus, rather than as evidence of absence across the entire literature.
 
