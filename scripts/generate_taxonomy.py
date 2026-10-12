@@ -26,13 +26,19 @@ def cell(ax, x0: float, y0: float, width: float, height: float, *,
 
 def main() -> None:
     data = pd.read_csv(DATA).fillna("")
-    if len(data) != 35:
+    if len(data) != 46:
         raise ValueError(f"expected 35 included studies, got {len(data)}")
 
     counts = data["taxonomy_group"].value_counts().to_dict()
-    expected = {"A": 14, "B": 16, "C": 2, "D": 3}
+    expected = {"A": 18, "B": 18, "C": 4, "D": 6}
     if {key: counts.get(key, 0) for key in expected} != expected:
         raise ValueError(f"unexpected taxonomy counts: {counts}")
+
+    # Group D spans the three feedback cells (adjudication 2026-08-06):
+    # no symbolic structure: PaLM-E, OWG; lightweight: RONAR; formal: Zhang, Capitanelli, Wang.
+    d_cells = {(0, 1): 2, (1, 1): 1, (2, 1): 3}
+    if sum(d_cells.values()) != counts["D"]:
+        raise ValueError("Group D cell breakdown does not match total")
 
     fig, ax = plt.subplots(figsize=(13, 8.4))
     ax.set_xlim(0, 1)
@@ -42,7 +48,7 @@ def main() -> None:
     fig.text(0.5, 0.965, "Taxonomy of Symbolic Structure and Autonomous Feedback",
              ha="center", va="center", fontsize=22, fontweight="bold")
     fig.text(0.5, 0.92,
-             "Distribution of the 35 included studies across two independent dimensions",
+             "Distribution of the 46 included studies across two independent dimensions",
              ha="center", va="center", fontsize=15, color="#666666")
 
     x = [0.03, 0.285, 0.63, 0.97]
@@ -81,6 +87,8 @@ def main() -> None:
         (0, 0): ("A", "Direct Generation"),
         (1, 0): ("B", "Static Neuro-Symbolic"),
         (2, 0): ("C", "Formal Verification"),
+        (0, 1): ("D", "Runtime Recovery"),
+        (1, 1): ("D", "Runtime Recovery"),
         (2, 1): ("D", "Runtime Plan Adaptation and Recovery"),
     }
     for row in range(3):
@@ -88,10 +96,8 @@ def main() -> None:
             y = y_top - header_h - (row + 1) * row_h
             cx = (x[col + 1] + x[col + 2]) / 2
             cy = y + row_h / 2
-            if (row, col) not in entries:
-                ax.text(cx, cy, "No included studies", ha="center", va="center", fontsize=13)
-                continue
             group, label = entries[(row, col)]
+            n = d_cells[(row, col)] if col == 1 else counts[group]
             ax.add_patch(patches.Rectangle(
                 (x[col + 1], y), x[col + 2] - x[col + 1], row_h,
                 facecolor=colors[group], edgecolor="#A0A0A0", linewidth=0.9,
@@ -101,7 +107,7 @@ def main() -> None:
                     fontsize=15, fontweight="bold")
             ax.text(cx, cy, label, ha="center", va="center", fontsize=12.5)
             ax.text(cx, cy - 0.055,
-                    f"{counts[group]} included studies ({counts[group] / len(data) * 100:.1f}%)",
+                    f"{n} included studies ({n / len(data) * 100:.1f}%)",
                     ha="center", va="center", fontsize=12.5)
 
     gap_x, gap_y, gap_w, gap_h = 0.075, 0.06, 0.85, 0.135
@@ -114,7 +120,7 @@ def main() -> None:
             ha="left", va="center", fontsize=13.5, fontweight="bold")
     gap = ("No included study demonstrates a complete closed-loop neuro-symbolic recovery "
            "cycle combining dynamic-world change, semantic diagnosis of physical failure, "
-           "formal model updating, and autonomous replanning without possible human fallback.")
+           "formal model updating, and autonomous replanning.")
     lines = textwrap.wrap(gap, width=92)
     ax.text(gap_x + 0.20, gap_y + gap_h * 0.62, "\n".join(lines),
             ha="left", va="center", fontsize=12.2, linespacing=1.35)

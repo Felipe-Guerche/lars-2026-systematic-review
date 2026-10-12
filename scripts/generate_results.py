@@ -49,7 +49,7 @@ def plot_taxonomy() -> None:
     bars = ax.bar([f"{g}\n(n={int(counts[g])})" for g in GROUP_ORDER], counts.values,
                   color=["#3498db", "#2ecc71", "#e67e22", "#9b59b6"])
     ax.set_ylabel("Number of studies")
-    ax.set_title("Taxonomy of LLM–robot integration (n=35)")
+    ax.set_title("Taxonomy of LLM–robot integration (n=46)")
     ax.set_ylim(0, max(counts) * 1.25)
     for bar, group in zip(bars, GROUP_ORDER):
         ax.text(bar.get_x() + bar.get_width() / 2, bar.get_height() + 0.2,

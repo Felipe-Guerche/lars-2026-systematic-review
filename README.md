@@ -62,14 +62,15 @@ docs/           Protocol, data dictionary, taxonomy, and provenance notes
 - **Databases:** Scopus, IEEE Xplore, and ACM Digital Library
 - **Reported records before deduplication:** 183
 - **Reported records after deduplication:** 148
-- **Full texts assessed:** 38
-- **Included studies:** 35
-- **Full-text exclusions:** 3
+- **Full texts assessed:** 55 (38 in the original review + 17 recovered in supplementary open-access retrieval, August 2026)
+- **Included studies:** 46
+- **Full-text exclusions:** 9
+- **Not retrieved:** 11 (10 with no open-access version found + 1 bot-blocked)
 
 ## Canonical sources
 
-- `data/studies.csv` is the bibliographic and screening source for the 38 full-text records.
-- `data/extraction/study_extraction.csv` is the source for all study-level results and contains 35 rows.
+- `data/studies.csv` is the bibliographic and screening source for the 55 full-text records.
+- `data/extraction/study_extraction.csv` is the source for all study-level results and contains 46 rows.
 - `data/search/database_yields.csv` is the source for database and query yields.
 - `data/search/zotero_full_text.bib` is the sanitized Zotero-compatible export of the 38 full-text records; it contains metadata and DOIs, not abstracts or attachments.
 - `results/` contains generated outputs, not hand-edited values.
@@ -115,7 +116,7 @@ The scripts use repository-relative paths and write only to `results/`. The vali
 
 ## Important provenance note
 
-The source workspace contains 147 bibliographic entries and 131 explicit title/abstract rows. The reported 148 PRISMA screening units consist of those 147 records plus the original `AdjunctProceedings*` grouped proceedings row, which covers 17 administrative proceedings records listed in `data/screening/grouped_exclusions.csv`. The 28 not-retrieved candidates are listed in `data/screening/not_retrieved.csv`. Screening, full-text assessment, study-level extraction, and taxonomy coding were performed by the first author. No auditable independent second-reviewer decision series was retained; therefore, no inter-rater agreement statistic is reported. The repository does not redistribute publisher PDFs or local Zotero attachments.
+The source workspace contains 147 bibliographic entries and 131 explicit title/abstract rows. The reported 148 PRISMA screening units consist of those 147 records plus the original `AdjunctProceedings*` grouped proceedings row, which covers 17 administrative proceedings records listed in `data/screening/grouped_exclusions.csv`. The 11 not-retrieved candidates are listed in `data/screening/not_retrieved.csv`; `data/screening/oa_retrieval_coding.csv` documents the coding of the 18 reports recovered in the supplementary open-access retrieval round. Screening, full-text assessment, study-level extraction, taxonomy coding, and borderline adjudication were performed by the first author (single coder). No auditable independent second-reviewer decision series was retained; therefore, no inter-rater agreement statistic is reported. The repository does not redistribute publisher PDFs or local Zotero attachments.
 
 ## Licenses and data policy
 

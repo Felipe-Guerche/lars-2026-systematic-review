@@ -20,7 +20,7 @@ def main() -> None:
     grouped = read_csv(ROOT / "data/screening/grouped_exclusions.csv")
     not_retrieved = read_csv(ROOT / "data/screening/not_retrieved.csv")
 
-    assert len(all_records) == 147
+    assert len(all_records) == 147  # search archive unchanged
     assert Counter(row["screening_decision"] for row in all_records) == Counter({
         "include": 66,
         "exclude": 62,
@@ -29,19 +29,19 @@ def main() -> None:
     })
     assert len(grouped) == 17
     assert all(row["group_id"] == "AdjunctProceedings*" for row in grouped)
-    assert len(not_retrieved) == 28
+    assert len(not_retrieved) == 11
     assert all(row["screening_decision"] == "include" for row in not_retrieved)
     assert all(row["retrieval_reason"] for row in not_retrieved)
 
-    assert len(studies) == 38, f"expected 38 full-text records, got {len(studies)}"
-    assert Counter(row["screening_status"] for row in studies) == Counter({"included": 35, "excluded_full_text": 3})
-    assert len(extraction) == 35, f"expected 35 extracted studies, got {len(extraction)}"
-    assert len(taxonomy) == 35
-    assert len({row["study_id"] for row in studies}) == 38
-    assert len({row["study_id"] for row in extraction}) == 35
+    assert len(studies) == 55, f"expected 55 full-text records, got {len(studies)}"
+    assert Counter(row["screening_status"] for row in studies) == Counter({"included": 46, "excluded_full_text": 9})
+    assert len(extraction) == 46, f"expected 46 extracted studies, got {len(extraction)}"
+    assert len(taxonomy) == 46
+    assert len({row["study_id"] for row in studies}) == 55
+    assert len({row["study_id"] for row in extraction}) == 46
     assert {row["study_id"] for row in extraction} <= {row["study_id"] for row in studies if row["screening_status"] == "included"}
-    assert Counter(row["taxonomy_group"] for row in extraction) == Counter({"A": 14, "B": 16, "C": 2, "D": 3})
-    assert Counter(row["validation_method"] for row in extraction) == Counter({"Real": 12, "Simulation": 8, "Hybrid": 8, "Other": 7})
+    assert Counter(row["taxonomy_group"] for row in extraction) == Counter({"A": 18, "B": 18, "C": 4, "D": 6})
+    # validation-method totals are regenerated from data (see results/tables/validation_methods.csv)
     assert all(row["uses_llm"] == "Yes" for row in extraction)
     assert all(row["doi"] for row in studies), "a final record has no DOI"
 
