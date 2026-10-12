@@ -123,20 +123,28 @@ def plot_challenges() -> None:
 
 
 def plot_tradeoff() -> None:
-    levels = {"A": 1, "B": 2, "C": 3, "D": 3}
-    counts = df["taxonomy_group"].value_counts().reindex(GROUP_ORDER).fillna(0)
-    table = pd.DataFrame({"group": GROUP_ORDER, "label": [GROUP_LABELS[g] for g in GROUP_ORDER],
-                          "verification_formality_level": [levels[g] for g in GROUP_ORDER],
-                          "count": counts.astype(int).values})
+    base_levels = {"A": 1, "B": 2, "C": 3, "D": 3}
+    # Group D spans levels (adjudication 2026-08-06): PaLM-E and OWG recover without
+    # formal verification; RONAR uses a lightweight runtime scene graph.
+    overrides = {"driessPaLMEEmbodiedMultimodal2023": 1,
+                 "tziafasOpenWorldGraspingLarge2024": 1,
+                 "wangCanTellWhat2024": 2}
+    lv = df.apply(lambda r: overrides.get(r["study_id"], base_levels[r["taxonomy_group"]]), axis=1)
+    counts = lv.value_counts().reindex([1, 2, 3]).fillna(0).astype(int)
+    labels = {1: "No formal verification", 2: "Lightweight symbolic consistency",
+              3: "Formal verification against explicit model"}
+    table = pd.DataFrame({"verification_formality_level": [1, 2, 3],
+                          "label": [labels[i] for i in (1, 2, 3)],
+                          "count": counts.values})
     table["percentage"] = (table["count"] / len(df) * 100).round(1)
     table.to_csv(TABLES / "expertise_safety_by_group.csv", index=False)
     fig, ax = plt.subplots(figsize=(9, 5.5))
-    ax.bar(GROUP_ORDER, table["verification_formality_level"], color=["#3498db", "#2ecc71", "#e67e22", "#9b59b6"])
-    ax.set_xlabel("Taxonomy group")
-    ax.set_ylabel("Verification formality level")
-    ax.set_title("Verification formality level by taxonomy group")
-    ax.set_ylim(0, 3.5)
-    for i, row in table.iterrows(): ax.text(i, row["verification_formality_level"] + .08, f"n={row['count']}", ha="center")
+    ax.bar([str(i) for i in (1, 2, 3)], table["count"], color=["#3498db", "#2ecc71", "#e67e22"])
+    ax.set_xlabel("Verification formality level")
+    ax.set_ylabel("Number of studies")
+    ax.set_title(f"Verification formality level across the {len(df)} included studies")
+    for i, row in table.iterrows():
+        ax.text(i, row["count"] + .3, f"n={row['count']} ({row['percentage']}%)", ha="center")
     save_figure(fig, "expertise_safety")
 
 
@@ -145,7 +153,7 @@ def main() -> None:
     FIGURES.mkdir(parents=True, exist_ok=True)
     global df
     df = pd.read_csv(DATA).fillna("")
-    if len(df) != 35: raise ValueError(f"expected 35 studies, got {len(df)}")
+    if len(df) != 46: raise ValueError(f"expected 46 studies, got {len(df)}")
 
     save_counts("taxonomy_groups", df["taxonomy_group"].value_counts(), GROUP_ORDER)
     save_counts("interface_modalities", df["interface_modality"].value_counts(), ["Text", "Voice", "Multimodal", "Other", "Unspecified"])

@@ -1,5 +1,4 @@
-group,label,verification_formality_level,count,percentage
-A,Group A — Direct generation,1,14,40.0
-B,Group B — Static neuro-symbolic,2,16,45.7
-C,Group C — Formal verification,3,2,5.7
-D,Group D — Runtime plan adaptation and recovery,3,3,8.6
+verification_formality_level,label,count,percentage
+1,No formal verification,20,43.5
+2,Lightweight symbolic consistency,19,41.3
+3,Formal verification against explicit model,7,15.2
