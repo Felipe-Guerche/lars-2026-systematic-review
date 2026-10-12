@@ -20,7 +20,8 @@ distinct from the bibliographic search, which ended on 3 November 2025) identifi
 6 excluded) and one (liuSPECTRA) could not be obtained even in the supplementary round and remains not
 retrieved. Final not-retrieved count: 11. Protected publisher files are not redistributed.
 
-The 18 supplementary-retrieved reports were coded under a frozen protocol (five dimensions with
+The 18 candidates identified in the supplementary retrieval round were coded under a frozen protocol
+(17 from retrieved full texts plus liuSPECTRA coded from its abstract; five dimensions with
 Sim/Nao/Nao determinado plus textual evidence and page references; anti-exclusion rules) documented in the
 manuscript companion files. Screening, full-text assessment, study-level extraction, taxonomy coding, and
 the final adjudication of borderline cases were performed by the first author (single coder). No
@@ -42,3 +43,5 @@ Publisher PDFs, abstracts copied from publisher records, local file paths, and Z
 ## Source-of-truth rule
 
 A result is valid only when it can be regenerated from the files in `data/` by the scripts in `scripts/`. Hand-edited figures and stale Portuguese extraction files are not canonical sources.
+
+Note: `scripts/generate_prisma.py` encodes the PRISMA flow counts explicitly (183/35/148/82/66/11/55/9/46) rather than deriving them from the screening records; `scripts/validate_data.py` verifies those counts against the canonical CSVs on every run.

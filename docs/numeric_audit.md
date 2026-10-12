@@ -47,8 +47,8 @@ in the manuscript after the supplementary open-access retrieval round (corpus fr
 
 - The 147 bibliographic records and the original `AdjunctProceedings*` grouped row account for the reported
   148 screening units. The 17 grouped proceedings records are explicit in `data/screening/grouped_exclusions.csv`.
-- The supplementary open-access retrieval round (August 2026) recovered 18 of the 28 originally
-  not-retrieved reports; 17 were assessed (11 included, 6 excluded) and 1 (liuSPECTRA) remains not
-  retrieved. Per-report coding is in `data/screening/oa_retrieval_coding.csv`.
+- The supplementary open-access retrieval round (August 2026) identified open-access versions of 18 of
+  the 28 originally not-retrieved reports; 17 full texts were retrieved and assessed (11 included,
+  6 excluded) and 1 (liuSPECTRA) remains not retrieved. Per-report coding is in `data/screening/oa_retrieval_coding.csv`.
 - The article treats all cross-study comparisons as descriptive/exploratory and reports no inferential
   statistics. Single-coder screening/extraction/adjudication is a declared limitation.

@@ -154,7 +154,7 @@ PRISMA 2020 flow diagram of the study selection process: `results/figures/prisma
 (66 sought -> 55 assessed / 11 not retrieved -> 46 included, 9 excluded).
 
 The following items were moved out of the main paper to respect the page limit; the corresponding counts
-remain in the main text. Figures from the release v1.0.11 generation scripts:
+remain in the main text. Figures from the release v1.0.13 generation scripts:
 - `results/figures/interface_modalities.png` — interface-modality distribution (RQ1)
 - `results/figures/llm_families.png` — LLM-family ranking (RQ2)
 - `results/figures/expertise_safety.png` — verification formality levels (RQ3): Level 1 = 20 studies (43.5%), Level 2 = 19 (41.3%), Level 3 = 7 (15.2%)
@@ -182,7 +182,7 @@ Traceability from corpus evidence to candidate requirements (Section VI of the m
 
 ## Data availability
 
-The versioned [release v1.0.11](https://github.com/Felipe-Guerche/lars-2026-systematic-review/releases/tag/v1.0.11) contains the nine complete search strings, database yields, sanitized metadata and DOIs for the 55 full-text records, `grouped_exclusions.csv`, `not_retrieved.csv`, `oa_retrieval_coding.csv`, full-text decisions, English extraction table (46 studies), taxonomy audit, result tables, figure-generation scripts, and the sanitized Zotero-compatible BibTeX export. This supplement is included in the release as `docs/SR_supplement.md`. Repository development and maintenance are credited to Felipe Delduque Guerche (`Felipe-Guerche`). Publisher PDFs, local Zotero attachments, and the private Zotero database are not redistributed.
+The versioned [release v1.0.13](https://github.com/Felipe-Guerche/lars-2026-systematic-review/releases/tag/v1.0.13) contains the nine complete search strings, database yields, sanitized metadata and DOIs for the 55 full-text records, `grouped_exclusions.csv`, `not_retrieved.csv`, `oa_retrieval_coding.csv`, full-text decisions, English extraction table (46 studies), taxonomy audit, result tables, figure-generation scripts, and the sanitized Zotero-compatible BibTeX export. This supplement is included in the release as `docs/SR_supplement.md`. Repository development and maintenance are credited to Felipe Delduque Guerche (`Felipe-Guerche`). Publisher PDFs, local Zotero attachments, and the private Zotero database are not redistributed.
 
 ## Complete List of 46 Primary Studies
 
