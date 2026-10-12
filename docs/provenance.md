@@ -14,10 +14,11 @@ The final full-text set has 55 records: 46 included and 9 excluded. The three or
 exclusions are retained with their reasons in `data/screening/full_text_decisions.csv` and `data/studies.csv`.
 Of the 66 reports sought for retrieval, 28 could not be retrieved through the first author's UFSCar
 institutional login in the original review. A supplementary open-access retrieval round (August 2026;
-distinct from the bibliographic search, which ended on 3 November 2025) recovered 18 of these reports
-(arXiv, publisher open access, or institutional repositories; see `data/screening/oa_retrieval_coding.csv`);
-17 were assessed (11 included, 6 excluded) and one (liuSPECTRA) could not be machine-retrieved and remains
-not retrieved. Final not-retrieved count: 11. Protected publisher files are not redistributed.
+distinct from the bibliographic search, which ended on 3 November 2025) identified open-access versions of
+18 of these reports (arXiv, publisher open access, or institutional repositories; see
+`data/screening/oa_retrieval_coding.csv`); 17 full texts were retrieved and assessed (11 included,
+6 excluded) and one (liuSPECTRA) could not be obtained even in the supplementary round and remains not
+retrieved. Final not-retrieved count: 11. Protected publisher files are not redistributed.
 
 The 18 supplementary-retrieved reports were coded under a frozen protocol (five dimensions with
 Sim/Nao/Nao determinado plus textual evidence and page references; anti-exclusion rules) documented in the

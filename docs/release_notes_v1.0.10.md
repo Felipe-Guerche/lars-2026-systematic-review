@@ -1,16 +1,17 @@
-# Release notes — v1.0.10 (2026-08-06)
+# Release notes — v1.0.10 (published 2026-10-12; corpus frozen 2026-08-06)
 
 Frozen reproducibility snapshot for the revised LARS 2026 manuscript (46-study corpus). This release
-supersedes v1.0.9 and is the version cited by the article.
+supersedes v1.0.9 and is the version cited by the article. The corpus freeze date (2026-08-06) is a
+historical data date; the release publication date is 2026-10-12.
 
 ## What changed since v1.0.9
 
-- **Supplementary open-access retrieval round (August 2026):** 18 of the 28 originally not-retrieved
-  reports were recovered (arXiv, publisher open access, institutional repositories; verified against
-  Semantic Scholar and OpenAlex). 17 were assessed under the frozen protocol in
-  `reviews/protocol_a7b.md` (manuscript companion): 11 included, 6 excluded (5 EC3, 1 EC1).
-  One report (liuSPECTRA) remains not retrieved (ACM bronze OA bot-blocked). Final flow:
-  **55 assessed, 46 included, 9 excluded, 11 not retrieved**.
+- **Supplementary open-access retrieval round (August 2026):** open-access versions of 18 of the 28
+  originally not-retrieved reports were identified (arXiv, publisher open access, institutional
+  repositories; verified against Semantic Scholar and OpenAlex). Seventeen full texts were retrieved and
+  assessed under the frozen protocol in `reviews/protocol_a7b.md` (manuscript companion): 11 included,
+  6 excluded (5 EC3, 1 EC1). One report (liuSPECTRA) remained unobtainable (ACM bronze OA bot-blocked).
+  Final flow: **55 assessed, 46 included, 9 excluded, 11 not retrieved**.
 - **New files:** `data/screening/oa_retrieval_coding.csv` — per-report coding of the 18 recovered
   reports (eligibility decision; dimensions D1-D4 and C1-C3 as Sim/Nao/Nao determinado with textual
   evidence and page references; single-coder adjudication flags).
